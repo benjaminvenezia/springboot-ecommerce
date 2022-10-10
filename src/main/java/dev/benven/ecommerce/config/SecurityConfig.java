@@ -18,7 +18,7 @@ public class SecurityConfig {
     public InMemoryUserDetailsManager user() {
         return new InMemoryUserDetailsManager(
                 User.withUsername("ben")
-                        .password("1234")
+                        .password("{noop}1234")
                         .authorities("read")
                         .build()
         );
